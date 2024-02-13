@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Filters</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Roboto;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+</style>
+<body>
+	<section class="filters" id="filters">
+		<div class="filters__container">
+			<div class="filters__scrollable">
+					<div class="filters__wrap">
+						<button class="filters__close" type="button"><i></i></button>
+						<div class="filters__header">
+							<div class="filters__caption">Все фильтры</div>
+							<div class="filters__actions">
+								<button class="filters__apply" type="button">Применить фильтры</button>
+								<button class="filters__reset" type="button">Очистить</button>
+							</div>
+							<div class="filters__results">Найдено: 55 999 товаров</div>
+							<div class="filters__selected droped">
+								<ul>
+									<li>
+										<p>Белый плафон</p>
+										<span>2 888</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>Американская классика</p>
+										<span>2 888</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>Arte Lamp</p>
+										<span>2 888</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>Декоративный</p>
+										<span>377</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>Стекло</p>
+										<span>8 731</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>Белый</p>
+										<span>517</span>
+										<button type="button"></button>
+									</li>
+									<li>
+										<p>На потолок</p>
+										<span>731</span>
+										<button type="button"></button>
+									</li>
+									<li class="filters__tollge-selects" type="button"></li>
+								</ul>
+								<button class="filters__reset" type="button">Сбросить все</button>
+							</div>
+						</div>
+						<div class="filters__body">
+							<div class="filters__section filters__section_left"></div>
+							<div class="filters__section filters__section_center"></div>
+							<div class="filters__section filters__section_right"></div>
+						</div>
+					</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>
