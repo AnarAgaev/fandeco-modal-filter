@@ -135,7 +135,7 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-        z-index: 5;
+        z-index: 15;
         top: 0;
         right: 0;
         width: 40px;
@@ -183,7 +183,7 @@
     // Filters Header
     &__header {
         flex-shrink: 0;
-        z-index: 1;
+        z-index: 10;
         width: 100%;
         height: auto;
         padding: 40px 10px 20px;
@@ -399,6 +399,8 @@
             list-style: none;
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: auto;
 
             @media (min-width: 1200px) {
                 gap: 20px;
@@ -666,7 +668,7 @@
         justify-content: flex-end;
         align-items: center;
         position: absolute;
-        z-index: 0;
+        z-index: 5;
         cursor: pointer;
         top: 0;
         left: 0;
