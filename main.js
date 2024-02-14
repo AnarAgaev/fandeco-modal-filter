@@ -1,5 +1,15 @@
 import './style.scss'
 
+const initFiltersBadgesToggle = () => {
+    const toggle = document.querySelector('.filters__tollge-selects')
+    toggle.addEventListener('click', function() {
+        this
+            .closest('.filters__selected')
+            .classList
+            .toggle('show')
+    })
+}
+
 const handleFiltersItemToggleClick = (toggle) => {
     const isShow = toggle.classList.contains('show')
     var collapse = toggle.nextElementSibling
@@ -16,7 +26,7 @@ const handleFiltersItemToggleClick = (toggle) => {
 
 const initFiltersItemToggles = () => {
     const togglers = Array.from(document
-        .querySelectorAll('.filters__toggle'))
+        .querySelectorAll('.filters__toggle:not(:has(.filters__radio))'))
 
     togglers.forEach(toggle => toggle
         .addEventListener('click', function(e) {
@@ -24,16 +34,6 @@ const initFiltersItemToggles = () => {
             e.stopPropagation()
             handleFiltersItemToggleClick(this)
         }))
-}
-
-const initFiltersBadgesToggle = () => {
-    const toggle = document.querySelector('.filters__tollge-selects')
-    toggle.addEventListener('click', function() {
-        this
-            .closest('.filters__selected')
-            .classList
-            .toggle('show')
-    })
 }
 
 window.addEventListener('load', () => {
