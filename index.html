@@ -20,72 +20,435 @@
 	}
 </style>
 <body>
-	<section class="filters" id="filters">
-		<div class="filters__container">
-			<div class="filters__scrollable">
-					<div class="filters__wrap">
-						<button class="filters__close" type="button"><i></i></button>
-						<div class="filters__header">
-							<div class="filters__caption">Все фильтры</div>
-							<div class="filters__actions">
-								<button class="filters__apply" type="button">Применить фильтры</button>
-								<button class="filters__reset" type="button">Очистить</button>
-							</div>
-							<div class="filters__results">Найдено: 55 999 товаров</div>
-							<div class="filters__selected droped">
-								<ul>
-									<li>
-										<p>Белый плафон</p>
-										<span>2 888</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>Американская классика</p>
-										<span>2 888</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>Arte Lamp</p>
-										<span>2 888</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>Декоративный</p>
-										<span>377</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>Стекло</p>
-										<span>8 731</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>Белый</p>
-										<span>517</span>
-										<button type="button"></button>
-									</li>
-									<li>
-										<p>На потолок</p>
-										<span>731</span>
-										<button type="button"></button>
-									</li>
-									<li class="filters__tollge-selects" type="button"></li>
-								</ul>
-								<button class="filters__reset" type="button">Сбросить все</button>
-							</div>
+
+
+
+<section class="filters" id="filters">
+	<div class="filters__container">
+		<div class="filters__scrollable">
+				<div class="filters__wrap">
+					<button class="filters__close" type="button"><i></i></button>
+					<div class="filters__header">
+						<div class="filters__caption">Все фильтры</div>
+						<div class="filters__actions">
+							<button class="filters__apply" type="button">Применить фильтры</button>
+							<button class="filters__reset" type="button">Очистить</button>
 						</div>
-						<div class="filters__body">
-							<div class="filters__section filters__section_left"></div>
-							<div class="filters__section filters__section_center"></div>
-							<div class="filters__section filters__section_right"></div>
+						<div class="filters__results">Найдено: 55 999 товаров</div>
+						<div class="filters__selected">
+							<ul>
+								<li>
+									<p>Белый плафон</p>
+									<span>2 888</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>Американская классика</p>
+									<span>2 888</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>Arte Lamp</p>
+									<span>2 888</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>Декоративный</p>
+									<span>377</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>Стекло</p>
+									<span>8 731</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>Белый</p>
+									<span>517</span>
+									<button type="button"></button>
+								</li>
+								<li>
+									<p>На потолок</p>
+									<span>731</span>
+									<button type="button"></button>
+								</li>
+								<li class="filters__tollge-selects" type="button"></li>
+							</ul>
+							<button class="filters__reset" type="button">Сбросить все</button>
 						</div>
 					</div>
-			</div>
+					<div class="filters__body">
+						<div class="filters__section filters__section_left">
+							<ul class="filters__list">
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Цена</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>В наличии</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Под заказ</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Нет в продаже</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Полезное</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Интерьер</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Бренд</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Тип цоколя</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Стиль</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Тип лампочки</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Цвет плафона</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Материал плафона</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Крепеж</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="filters__section filters__section_center">
+							<ul class="filters__list">
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Диаметр, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Высота, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Ширина, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Длина, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Длина цепи, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Глубина врезки, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Диаметр врезки, см</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Площадь освещения, м2</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Количество ламп, шт</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Световой поток, лм</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Температура света, К</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Мощность, Вт</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Напряжение, В</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="filters__section filters__section_right">
+							<ul class="filters__list">
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Угол рассеивания</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Материал арматуры</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Цвет арматуры</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>IP</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Тип управления</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Возможность диммирования</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Пульт в комплекте</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Регулировка по высоте</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Можно использовать</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Место монтажа</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Вид выключателя</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Особенности</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+								<li class="filters__item">
+									<button class="filters__toggle">
+										<mark>Страна изготовитель</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse">
+										<div class="filters__dropdown"></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 		</div>
-	</section>
+	</div>
+</section>
+
 
 
 	<script type="module" src="/main.js"></script>
 </body>
-
 </html>
