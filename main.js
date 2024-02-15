@@ -1,5 +1,6 @@
 import './style.scss'
 
+// Drop and hide inner conntent
 const initFiltersBadgesToggle = () => {
     const toggle = document.querySelector('.filters__tollge-selects')
     toggle.addEventListener('click', function() {
@@ -36,10 +37,104 @@ const initFiltersItemToggles = () => {
         }))
 }
 
+// Tooltips
+const initFiltersTooltips = () => {
+    const tooltips = Array.from(document.querySelectorAll('.filters__tooltip'))
+
+    tooltips.forEach(tooltip => tooltip.addEventListener('click', function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+    }))
+}
+
+const hideAllFilterTooltips = () => {
+    const tooltips = Array.from(document
+        .querySelectorAll('.filters__tooltip'))
+
+    tooltips.forEach(tooltip => tooltip.classList.remove('show', 'visible'))
+}
+
+const getPositionFiltersTooltipsActions = (node) => {
+    var rect = node.getBoundingClientRect()
+    var scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop
+    var left = rect.left + scrollLeft
+    var top = rect.top + scrollTop
+    return { left: left, top: top }
+}
+
+const setFiltersTooltipPosition = (button, tooltip) => {
+    const {left, top} = getPositionFiltersTooltipsActions(button)
+    tooltip.style.left = `${left}px`
+    tooltip.style.top = `${top}px`
+}
+
+const showSingleFiltersTooltip = (tooltip) => {
+    tooltip.classList.add('show')
+
+    setTimeout(
+        () => tooltip.classList.add('visible'),
+        100
+    )
+}
+
+const handlerFiltersTooltipsActionsClick = (button) => {
+    const tooltip = button
+        .closest('.filters__toggle')
+        .querySelector('.filters__tooltip')
+
+    if (tooltip.classList.contains('show')) {
+        hideAllFilterTooltips()
+        return
+    }
+
+    window.innerWidth > 1200
+        ? setFiltersTooltipPosition(button, tooltip)
+        : tooltip.removeAttribute('style')
+
+    hideAllFilterTooltips()
+    showSingleFiltersTooltip(tooltip)
+}
+
+const initFiltersTooltipsActions = () => {
+    const btns = Array.from(document.querySelectorAll('.filters__toggle strong'))
+
+    btns.forEach(btn => btn.addEventListener('click', function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+        handlerFiltersTooltipsActionsClick(this)
+    }))
+}
+
+const initHideAllFilterTooltipsOnWindow = () => {
+    const filterScrollBody = document.querySelector('.filters__scrollable')
+    filterScrollBody.addEventListener('scroll', hideAllFilterTooltips)
+
+    const filtersToggles = Array.from(document.querySelectorAll('.filters__toggle'))
+    filtersToggles.forEach(toggle => toggle.addEventListener('click', hideAllFilterTooltips))
+
+    window.addEventListener('resize', hideAllFilterTooltips)
+    document.addEventListener('click', hideAllFilterTooltips)
+}
+
+const initHandlerFilterTooltipsClose = () => {
+    const buttons = Array.from(document
+        .querySelectorAll('.filters__tooltip-close'))
+
+    buttons.forEach(btn => btn.addEventListener(
+        'click',
+        hideAllFilterTooltips
+    ))
+}
+
 window.addEventListener('load', () => {
     const isFilters = document.querySelector('.filters')
     if (!isFilters) return
 
     initFiltersItemToggles()
     initFiltersBadgesToggle()
+    initFiltersTooltips()
+    initFiltersTooltipsActions()
+    initHideAllFilterTooltipsOnWindow()
+    initHandlerFilterTooltipsClose()
 })
