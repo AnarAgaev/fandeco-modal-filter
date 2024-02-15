@@ -127,6 +127,32 @@ const initHandlerFilterTooltipsClose = () => {
     ))
 }
 
+// Lists
+const handlerFitlerDropTogglerClick = (toggle) => {
+    const list = toggle.parentNode
+        .querySelector('.filters__controller-list')
+
+    const isCompressed = !list.classList.contains('uncompressed')
+
+    if (isCompressed) {
+        list.classList.add('uncompressed')
+        toggle.innerText = 'Свернуть'
+        return
+    }
+
+    list.classList.remove('uncompressed')
+    toggle.innerText = 'Смотреть все'
+}
+
+const initFiltersDropTogglers = () => {
+    const togglers = Array.from(document
+        .querySelectorAll('.filters__drop-toggler'))
+
+    togglers.forEach(toggle => toggle.addEventListener('click', function() {
+        handlerFitlerDropTogglerClick(this)
+    }))
+}
+
 window.addEventListener('load', () => {
     const isFilters = document.querySelector('.filters')
     if (!isFilters) return
@@ -137,4 +163,5 @@ window.addEventListener('load', () => {
     initFiltersTooltipsActions()
     initHideAllFilterTooltipsOnWindow()
     initHandlerFilterTooltipsClose()
+    initFiltersDropTogglers()
 })

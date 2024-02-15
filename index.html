@@ -25,7 +25,7 @@
 
 <section class="filters" id="filters">
 	<div class="filters__container">
-		<div class="filters__scrollable">
+		<div class="filters__scrollable scrollable">
 				<div class="filters__wrap">
 					<button class="filters__close" type="button"><i></i></button>
 					<div class="filters__header">
@@ -93,7 +93,7 @@
 									<button class="filters__toggle">
 										<mark>В наличии</mark>
 										<label class="filters__radio">
-											<input type="checkbox" value="" name="" checked>
+											<input type="checkbox" value="" name="" checked class="invisible">
 											<span></span>
 										</label>
 									</button>
@@ -102,7 +102,7 @@
 									<button class="filters__toggle">
 										<mark>Под заказ</mark>
 										<label class="filters__radio">
-											<input type="checkbox" value="" name="" checked>
+											<input type="checkbox" value="" name="" checked class="invisible">
 											<span></span>
 										</label>
 									</button>
@@ -111,7 +111,7 @@
 									<button class="filters__toggle">
 										<mark>Нет в продаже</mark>
 										<label class="filters__radio">
-											<input type="checkbox" value="" name="">
+											<input type="checkbox" value="" name="" class="invisible">
 											<span></span>
 										</label>
 									</button>
@@ -336,8 +336,24 @@
 								</li>
 								<li class="filters__item">
 									<button class="filters__toggle">
-										<mark>Мощность, Вт</mark>
+										<mark>Мощность, Вт<strong></strong></mark>
 										<i></i>
+										<span class="filters__tooltip">
+											<span class="filters__tooltip-close"></span>
+											<span class="filters__tooltip-pic">
+												<img src="https://aws.massive.ru/fandeco.ru/filters-tooltip-img.jpg" alt="" title="">
+											</span>
+											<span class="filters__tooltip-body">
+												<span class="filters__tooltip-title">Замковый</span>
+												<span class="filters__tooltip-text">
+													Замковый стиль характеризуется наличием различных рыцарских элементов: доспехов, мечей, бревен и
+													так далее.</span>
+												<!-- Не активной кнопке, добавляем класс disabled -->
+												<span class="filters__tooltip-button disabled">Применить</span>
+												<!-- Для отсутствующего товара, добавляем класс disabled -->
+												<span class="filters__tooltip-count disabled">(Товары не найдены)</span>
+											</span>
+										</span>
 									</button>
 									<div class="filters__collapse">
 										<div class="filters__dropdown"></div>
@@ -366,8 +382,163 @@
 									</div>
 								</li>
 								<li class="filters__item">
+									<button class="filters__toggle show">
+										<mark>Материал арматуры</mark>
+										<i></i>
+									</button>
+									<div class="filters__collapse show">
+										<div class="filters__dropdown">
+											<label class="filters__search">
+												<input type="text" placeholder="Поиск">
+											</label>
+											<ul class="filters__controller-list scrollable">
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<!-- У неактивного Input(а) добавляем атрибут disabled -->
+														<input type="checkbox" class="invisible" disabled>
+														<span class="checker"></span>
+														<span class="text">Металл</span>
+														<span class="count">14842</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible" disabled>
+															<span class="checker"></span>
+															<span class="text">Металл</span>
+															<span class="count">14842</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Стекло</span>
+															<span class="count">765</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Хрусталь</span>
+															<span class="count">913</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Сталь</span>
+															<span class="count">298</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Алюминий</span>
+															<span class="count">330</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Акрил</span>
+															<span class="count">384</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Дерево</span>
+															<span class="count">246</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Пластик</span>
+															<span class="count">78</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Полимер</span>
+															<span class="count">30</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Керамика</span>
+															<span class="count">29</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Кожа</span>
+															<span class="count">47</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Силикон</span>
+															<span class="count">22</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Медь</span>
+															<span class="count">19</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Канат</span>
+															<span class="count">8</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Латунь</span>
+															<span class="count">6</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox">
+														<input type="checkbox" class="invisible">
+															<span class="checker"></span>
+															<span class="text">Бетон</span>
+															<span class="count">2</span>
+													</label>
+												</li>
+											</ul>
+
+											<!-- Кнопку Смотреть все добавлять только в том случае, если в списке БОЛЕЕ 7 ПУНКТОВ -->
+											<button type="button" class="filters__drop-toggler">Смотреть все</button>
+										</div>
+									</div>
+								</li>
+								<li class="filters__item">
 									<button class="filters__toggle">
-										<mark>Материал арматуры<strong></strong></mark>
+										<mark>Цвет арматуры<strong></strong></mark>
 										<i></i>
 										<span class="filters__tooltip">
 											<span class="filters__tooltip-close"></span>
@@ -383,15 +554,6 @@
 												<span class="filters__tooltip-count">(2 988 товаров)</span>
 											</span>
 										</span>
-									</button>
-									<div class="filters__collapse">
-										<div class="filters__dropdown"></div>
-									</div>
-								</li>
-								<li class="filters__item">
-									<button class="filters__toggle">
-										<mark>Цвет арматуры</mark>
-										<i></i>
 									</button>
 									<div class="filters__collapse">
 										<div class="filters__dropdown"></div>
@@ -428,18 +590,32 @@
 									<button class="filters__toggle">
 										<mark>Пульт в комплекте</mark>
 										<label class="filters__radio">
-											<input type="checkbox" value="" name="">
+											<input type="checkbox" value="" name="" class="invisible">
 											<span></span>
 										</label>
 									</button>
 								</li>
 								<li class="filters__item">
 									<button class="filters__toggle">
-										<mark>Регулировка по высоте</mark>
+										<mark>Регулировка по высоте<strong></strong></mark>
 										<label class="filters__radio">
-											<input type="checkbox" value="" name="">
+											<input type="checkbox" value="" name="" class="invisible">
 											<span></span>
 										</label>
+										<span class="filters__tooltip">
+											<span class="filters__tooltip-close"></span>
+											<span class="filters__tooltip-pic">
+												<img src="https://aws.massive.ru/fandeco.ru/filters-tooltip-img.jpg" alt="" title="">
+											</span>
+											<span class="filters__tooltip-body">
+												<span class="filters__tooltip-title">Замковый</span>
+												<span class="filters__tooltip-text">
+													Замковый стиль характеризуется наличием различных рыцарских элементов: доспехов, мечей, бревен и
+													так далее.</span>
+												<span class="filters__tooltip-button">Применить</span>
+												<span class="filters__tooltip-count">(2 988 товаров)</span>
+											</span>
+										</span>
 									</button>
 								</li>
 								<li class="filters__item">
