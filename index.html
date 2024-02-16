@@ -209,16 +209,253 @@
 										<mark>Цвет плафона</mark>
 										<i></i>
 									</button>
-									<div class="filters__collapse">
-										<div class="filters__dropdown"></div>
+									<div class="filters__collapse show">
+										<div class="filters__dropdown">
+											<label class="filters__search">
+												<input type="text" placeholder="Поиск">
+											</label>
+											<ul class="filters__controller-list scrollable">
+												<li class="filters__controller">
+													<!-- Для цвета добавляем data-color с соответствующим значением в .filters__checkbox -->
+													<label class="filters__checkbox" data-color="Бежевый">
+														<!-- У неактивного Input(а) добавляем атрибут disabled -->
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<!-- Ничего лишнего в текстовое поле кроме значения не добавлять! По нему происходит фильтрация -->
+														<span class="text">Бежевый</span>
+														<span class="count">27</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Белый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Белый</span>
+														<span class="count">297</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Бронза">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Бронза</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Голубой">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Голубой</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Зелёный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Зелёный</span>
+														<span class="count">1</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Золотистый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Золотистый</span>
+														<span class="count">4</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Матовый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Матовый</span>
+														<span class="count">4</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Прозрачный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Прозрачный</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Разноцветный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Разноцветный</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Розовый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Розовый</span>
+														<span class="count">2</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Серебристый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Серебристый</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Серый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Серый</span>
+														<span class="count">7</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Хром">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Хром</span>
+														<span class="count">1</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Чёрный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Чёрный</span>
+														<span class="count">6</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Янтарный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Янтарный</span>
+														<span class="count">1</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Красный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Красный</span>
+														<span class="count">7</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Синий">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Синий</span>
+														<span class="count">3</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Коричневый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Коричневый</span>
+														<span class="count">2</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Жёлтый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Жёлтый</span>
+														<span class="count">5</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Фиолетовый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Фиолетовый</span>
+														<span class="count">1</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Оранжевый">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Оранжевый</span>
+														<span class="count">4</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Медный">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Медный</span>
+														<span class="count">6</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Латунь">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Латунь</span>
+														<span class="count">19</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Никель">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Никель</span>
+														<span class="count">11</span>
+													</label>
+												</li>
+												<li class="filters__controller">
+													<label class="filters__checkbox" data-color="Матовый:никель">
+														<input type="checkbox" class="invisible">
+														<span class="checker"></span>
+														<i class="color"></i>
+														<span class="text">Матовый:никель</span>
+														<span class="count">7</span>
+													</label>
+												</li>
+											</ul>
+
+											<!-- Кнопку Смотреть все добавлять только в том случае, если в списке БОЛЕЕ 7 ПУНКТОВ -->
+											<button type="button" class="filters__drop-toggler">Смотреть все</button>
+										</div>
 									</div>
 								</li>
 								<li class="filters__item">
-									<button class="filters__toggle">
+									<button class="filters__toggle show">
 										<mark>Материал плафона</mark>
 										<i></i>
 									</button>
-									<div class="filters__collapse">
+									<div class="filters__collapse show">
 										<div class="filters__dropdown"></div>
 									</div>
 								</li>
@@ -397,6 +634,7 @@
 														<!-- У неактивного Input(а) добавляем атрибут disabled -->
 														<input type="checkbox" class="invisible" disabled>
 														<span class="checker"></span>
+														<!-- Ничего лишнего в текстовое поле кроме значения не добавлять! По нему происходит фильтрация -->
 														<span class="text">Металл</span>
 														<span class="count">14842</span>
 													</label>
@@ -404,14 +642,6 @@
 												<li class="filters__controller">
 													<label class="filters__checkbox">
 														<input type="checkbox" class="invisible" disabled>
-															<span class="checker"></span>
-															<span class="text">Металл</span>
-															<span class="count">14842</span>
-													</label>
-												</li>
-												<li class="filters__controller">
-													<label class="filters__checkbox">
-														<input type="checkbox" class="invisible">
 															<span class="checker"></span>
 															<span class="text">Стекло</span>
 															<span class="count">765</span>

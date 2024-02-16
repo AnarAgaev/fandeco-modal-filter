@@ -673,6 +673,8 @@
             font-weight: 700;
             line-height: 111.687%; /* 15.636px */
             transition: all .1s linear;
+            z-index: 1;
+            pointer-events: none;
         }
 
         em {
@@ -717,6 +719,7 @@
             transition: all .1s linear;
             background: transparent no-repeat center;
             background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1LjUgMjVDOS43MDA4NSAyNSA1IDIwLjI5OTEgNSAxNC41QzUgOC43MDA4NSA5LjcwMDg1IDQgMTUuNSA0QzIxLjI5OTEgNCAyNiA4LjcwMDg1IDI2IDE0LjVDMjYgMjAuMjk5MSAyMS4yOTkxIDI1IDE1LjUgMjVaTTE1LjUgMjIuOUMxNy43Mjc4IDIyLjkgMTkuODY0NCAyMi4wMTUgMjEuNDM5NyAyMC40Mzk3QzIzLjAxNSAxOC44NjQ0IDIzLjkgMTYuNzI3OCAyMy45IDE0LjVDMjMuOSAxMi4yNzIyIDIzLjAxNSAxMC4xMzU2IDIxLjQzOTcgOC41NjAzQzE5Ljg2NDQgNi45ODUgMTcuNzI3OCA2LjEgMTUuNSA2LjFDMTMuMjcyMiA2LjEgMTEuMTM1NiA2Ljk4NSA5LjU2MDMgOC41NjAzQzcuOTg1IDEwLjEzNTYgNy4xIDEyLjI3MjIgNy4xIDE0LjVDNy4xIDE2LjcyNzggNy45ODUgMTguODY0NCA5LjU2MDMgMjAuNDM5N0MxMS4xMzU2IDIyLjAxNSAxMy4yNzIyIDIyLjkgMTUuNSAyMi45Wk0xNC40NSAxNy42NUgxNi41NVYxOS43NUgxNC40NVYxNy42NVpNMTYuNTUgMTUuOTIyN1YxNi42SDE0LjQ1VjE1LjAyNUMxNC40NSAxNC43NDY1IDE0LjU2MDYgMTQuNDc5NSAxNC43NTc1IDE0LjI4MjVDMTQuOTU0NSAxNC4wODU2IDE1LjIyMTUgMTMuOTc1IDE1LjUgMTMuOTc1QzE1Ljc5ODMgMTMuOTc1IDE2LjA5MDQgMTMuODkwMyAxNi4zNDI0IDEzLjczMDdDMTYuNTk0NSAxMy41NzExIDE2Ljc5NiAxMy4zNDMzIDE2LjkyMzYgMTMuMDczN0MxNy4wNTExIDEyLjgwNCAxNy4wOTk1IDEyLjUwMzcgMTcuMDYzMSAxMi4yMDc3QzE3LjAyNjcgMTEuOTExNiAxNi45MDcgMTEuNjMyIDE2LjcxNzggMTEuNDAxNEMxNi41Mjg3IDExLjE3MDcgMTYuMjc4IDEwLjk5ODUgMTUuOTk0OCAxMC45MDQ4QzE1LjcxMTYgMTAuODExIDE1LjQwNzYgMTAuNzk5NyAxNS4xMTgyIDEwLjg3MTlDMTQuODI4OSAxMC45NDQyIDE0LjU2NTkgMTEuMDk3MiAxNC4zNjAxIDExLjMxMzFDMTQuMTU0MiAxMS41Mjg5IDE0LjAxMzkgMTEuNzk4OCAxMy45NTU1IDEyLjA5MTNMMTEuODk1MyAxMS42Nzg2QzEyLjAyMzEgMTEuMDQwMyAxMi4zMTggMTAuNDQ3NCAxMi43NSA5Ljk2MDQyQzEzLjE4MTkgOS40NzM0NCAxMy43MzU1IDkuMTA5OTEgMTQuMzU0IDguOTA2OTlDMTQuOTcyNSA4LjcwNDA2IDE1LjYzMzkgOC42NjkwMiAxNi4yNzA0IDguODA1NDVDMTYuOTA2OSA4Ljk0MTg3IDE3LjQ5NTcgOS4yNDQ4NyAxNy45NzY4IDkuNjgzNDdDMTguNDU3OCAxMC4xMjIxIDE4LjgxMzcgMTAuNjgwNSAxOS4wMDgyIDExLjMwMThDMTkuMjAyNiAxMS45MjMgMTkuMjI4NiAxMi41ODQ3IDE5LjA4MzUgMTMuMjE5M0MxOC45Mzg0IDEzLjg1MzkgMTguNjI3NCAxNC40Mzg2IDE4LjE4MjIgMTQuOTEzNkMxNy43MzcxIDE1LjM4ODUgMTcuMTczOCAxNS43MzY4IDE2LjU1IDE1LjkyMjdaIiBmaWxsPSIjQjFCMUIxIi8+Cjwvc3ZnPgo=");
+            pointer-events: all;
 
             @media (hover: hover) and (pointer: fine) {
                 &:hover {
@@ -746,7 +749,6 @@
         justify-content: flex-end;
         align-items: center;
         position: absolute;
-        z-index: 5;
         cursor: pointer;
         top: 0;
         left: 0;
@@ -985,11 +987,16 @@
         padding: 0;
         width: 100%;
         height: 48px;
+
+        &.invisible {
+            display: none !important;
+        }
     }
 
     &__checkbox {
         display: flex;
         align-items: center;
+        gap: 4px;
         position: relative;
         width: 100%;
         height: 100%;
@@ -1040,6 +1047,7 @@
             position: relative;
             width: 20px;
             height: 20px;
+            margin-right: 10px;
             border-radius: 3px;
             border: 1px solid #b1b1b1;
             background-color: transparent;
@@ -1065,7 +1073,7 @@
             display: block;
             position: relative;
             color: #666;
-            margin: 0 4px 0 14px;
+            margin: 0;
             transition: all .1s linear;
         }
 
@@ -1073,6 +1081,101 @@
             display: block;
             position: relative;
             color: #bababa;
+        }
+
+        .color {
+            display: block;
+            position: relative;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #5a5a5a;
+            border-radius: 50%;
+            margin-right: 2px;
+            box-shadow: 0 0 0 0.5px white;
+        }
+
+        &[data-color] .color {
+            background: transparent no-repeat center;
+            background-size: 100% auto;
+        }
+
+        &[data-color="Красный"] .color {
+            background-color: #ff0000;
+        }
+        &[data-color="Синий"] .color {
+            background-color: #1100cf;
+        }
+        &[data-color="Белый"] .color {
+            background-color: #ffffff;
+        }
+        &[data-color="Бежевый"] .color {
+            background-color: #f3cb7e;
+        }
+        &[data-color="Чёрный"] .color,
+        &[data-color="Черный"] .color {
+            background-color: #000000;
+        }
+        &[data-color="Серый"] .color {
+            background-color: #c4c4c4;
+        }
+        &[data-color="Коричневый"] .color {
+            background-color: #8f4114;
+        }
+        &[data-color="Жёлтый"] .color,
+        &[data-color="Желтый"] .color {
+            background-color: #fff500;
+        }
+        &[data-color="Фиолетовый"] .color {
+            background-color: #8436d2;
+        }
+        &[data-color="Зелёный"] .color,
+        &[data-color="Зеленый"] .color {
+            background-color: #23972e;
+        }
+        &[data-color="Розовый"] .color {
+            background-color: #fe7bc9;
+        }
+        &[data-color="Голубой"] .color {
+            background-color: #00d1ff;
+        }
+        &[data-color="Оранжевый"] .color {
+            background-color: #ff8a00;
+        }
+        &[data-color="Разноцветный"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/other.svg") no-repeat center center;
+        }
+        &[data-color="Прозрачный"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/shadow.svg") no-repeat center center;
+        }
+        &[data-color="Хром"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/chrom.svg") no-repeat center center;
+        }
+        &[data-color="Золотистый"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/gold.svg") no-repeat center center;
+        }
+        &[data-color="Матовый"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/mat.svg") no-repeat center center;
+        }
+        &[data-color="Серебристый"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/silver.svg") no-repeat center center;
+        }
+        &[data-color="Бронза"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/bronz.svg") no-repeat center center;
+        }
+        &[data-color="Янтарный"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/yantar.svg") no-repeat center center;
+        }
+        &[data-color="Медный"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/med.svg") no-repeat center center;
+        }
+        &[data-color="Латунь"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/latun.svg") no-repeat center center;
+        }
+        &[data-color="Никель"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/nicel.svg") no-repeat center center;
+        }
+        &[data-color="Матовый:никель"] .color {
+            background: url("https://aws.massive.ru/fandeco.ru/colors/mat_nic.svg") no-repeat center center;
         }
     }
 
@@ -1097,6 +1200,10 @@
             &:hover {
                 color: #de5617;
             }
+        }
+
+        &.invisible {
+            display: none !important;
         }
     }
 

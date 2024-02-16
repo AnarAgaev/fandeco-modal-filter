@@ -127,7 +127,7 @@ const initHandlerFilterTooltipsClose = () => {
     ))
 }
 
-// Lists
+// Drop and hide Lists with controllers
 const handlerFitlerDropTogglerClick = (toggle) => {
     const list = toggle.parentNode
         .querySelector('.filters__controller-list')
@@ -140,6 +140,7 @@ const handlerFitlerDropTogglerClick = (toggle) => {
         return
     }
 
+    list.scrollTop = 0
     list.classList.remove('uncompressed')
     toggle.innerText = 'Смотреть все'
 }
@@ -153,15 +154,66 @@ const initFiltersDropTogglers = () => {
     }))
 }
 
+// Searchig controllers lists
+const checkFiltersDropToggler = (items) => {
+    const dropToggler = items[0]
+        .closest('.filters__dropdown')
+        .querySelector('.filters__drop-toggler')
+
+    const unfilteredVals = Array
+        .from(items)
+        .filter(item => !item
+            .closest('.filters__controller')
+            .classList.contains('invisible'))
+
+    unfilteredVals.length <= 10
+        ? dropToggler.classList.add('invisible')
+        : dropToggler.classList.remove('invisible')
+}
+
+const handleSearchInput = (e) => {
+    const input = e.target
+    const parent = input.closest('.filters__item')
+    const items = parent.querySelectorAll('.filters__checkbox .text')
+
+    for (const i of items) {
+        const parentNode = i.closest('.filters__controller')
+        let value = i.innerText.trim().toLowerCase().replace(/ё/g, 'е')
+        let marker = input.value.trim().toLowerCase().replace(/ё/g, 'е')
+        const isContains = value.includes(marker)
+
+        parentNode.classList.remove('invisible')
+        if (!isContains) parentNode.classList.add('invisible')
+    }
+
+    checkFiltersDropToggler(items)
+}
+
+const initFiltersFilters = () => {
+    const searches = Array.from(document
+        .querySelectorAll('.filters__search input'))
+
+    searches.forEach(input => input.addEventListener(
+        'input',
+        handleSearchInput
+    ))
+}
+
 window.addEventListener('load', () => {
     const isFilters = document.querySelector('.filters')
     if (!isFilters) return
 
+    // Dropdowns
     initFiltersItemToggles()
     initFiltersBadgesToggle()
+
+    // Tooltips
     initFiltersTooltips()
     initFiltersTooltipsActions()
     initHideAllFilterTooltipsOnWindow()
     initHandlerFilterTooltipsClose()
     initFiltersDropTogglers()
+
+    // Searchig
+    initFiltersFilters()
 })
