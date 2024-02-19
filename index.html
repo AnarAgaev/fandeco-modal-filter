@@ -26,7 +26,7 @@
 <section class="filters" id="filters">
 	<div class="filters__container">
 		<div class="filters__scrollable scrollable">
-				<div class="filters__wrap">
+				<div class="filters__wrapper">
 					<button class="filters__close" type="button"><i></i></button>
 					<div class="filters__header">
 						<div class="filters__caption">Все фильтры</div>
@@ -81,12 +81,31 @@
 						<div class="filters__section filters__section_left">
 							<ul class="filters__list">
 								<li class="filters__item">
-									<button class="filters__toggle">
+									<button class="filters__toggle show">
 										<mark>Цена</mark>
 										<i></i>
 									</button>
-									<div class="filters__collapse">
-										<div class="filters__dropdown"></div>
+									<div class="filters__collapse show">
+										<div class="filters__dropdown">
+											<div class="filters__period">
+												<div class="filters__priod-values">
+													<input type="text" data-range-type="min" data-range-name="price" value="0">
+													<input type="text" data-range-type="max" data-range-name="price" value="300">
+												</div>
+												<label class="filters__ragne">
+													<span class="bar"></span>
+													<span class="slide"></span>
+													<input class="range" type="range" min="0" max="150" value="0"
+														step="1" name="price" data-target="min">
+												</label>
+												<label class="filters__ragne">
+													<span class="bar"></span>
+													<span class="slide" style="left: 100%;"></span>
+													<input class="range" type="range" min="150" max="300" value=""
+														step="1" name="price" data-target="max">
+												</label>
+											</div>
+										</div>
 									</div>
 								</li>
 								<li class="filters__item">
@@ -205,7 +224,7 @@
 									</div>
 								</li>
 								<li class="filters__item">
-									<button class="filters__toggle">
+									<button class="filters__toggle show">
 										<mark>Цвет плафона</mark>
 										<i></i>
 									</button>
@@ -451,11 +470,11 @@
 									</div>
 								</li>
 								<li class="filters__item">
-									<button class="filters__toggle show">
+									<button class="filters__toggle">
 										<mark>Материал плафона</mark>
 										<i></i>
 									</button>
-									<div class="filters__collapse show">
+									<div class="filters__collapse">
 										<div class="filters__dropdown"></div>
 									</div>
 								</li>
@@ -500,12 +519,31 @@
 									</div>
 								</li>
 								<li class="filters__item">
-									<button class="filters__toggle">
+									<button class="filters__toggle show">
 										<mark>Длина, см</mark>
 										<i></i>
 									</button>
-									<div class="filters__collapse">
-										<div class="filters__dropdown"></div>
+									<div class="filters__collapse show">
+										<div class="filters__dropdown">
+											<div class="filters__period">
+												<div class="filters__priod-values">
+													<input type="text" data-range-type="min" data-range-name="length" value="0">
+													<input type="text" data-range-type="max" data-range-name="length" value="100">
+												</div>
+												<label class="filters__ragne">
+													<span class="bar"></span>
+													<span class="slide"></span>
+													<input class="range" type="range" min="0" max="50" value="0" step="1" name="length"
+														data-target="min">
+												</label>
+												<label class="filters__ragne">
+													<span class="bar"></span>
+													<span class="slide" style="left: 100%;"></span>
+													<input class="range" type="range" min="50" max="100" value="" step="1" name="length"
+														data-target="max">
+												</label>
+											</div>
+										</div>
 									</div>
 								</li>
 								<li class="filters__item">
